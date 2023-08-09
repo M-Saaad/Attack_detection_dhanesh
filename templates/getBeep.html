@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static' , filename='css/style.css')}}">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Title</title>
+
+    <style>
+      .bg-nav{
+<!--        background: #bdc3c7;-->
+<!--        background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);-->
+<!--        background: linear-gradient(to right, #2c3e50, #bdc3c7);-->
+background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+
+<!--      h1{-->
+<!--      margin-top:20px;-->
+<!--      }-->
+
+<!--      .text-light{-->
+<!--      font-size: 23px;-->
+<!--      font-weight: bold;-->
+<!--      }-->
+
+<!--      .mt-50{-->
+<!--      margin-top:200px;-->
+<!--      }-->
+
+<!--      .mt-40{-->
+<!--      margin-top:100px;-->
+<!--      }-->
+
+      .submit-btn{
+        background: #141E30;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color:white;
+      }
+
+      a{
+      text-decoration:none;
+      }
+
+      .my-2{
+      width :700px;
+      }
+
+      .getbeep{
+      margin : auto;
+      }
+
+    </style>
+
+</head>
+<body>
+
+<div class="text-light bg-nav d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal" style="margin-right:750px;">Cyber Beep</h5>
+      <nav class="my-2 my-md-0 mr-md-2 "  >
+        <a class="p-2 text-light" href="{{url_for('GetBeep')}}">About</a>
+        <a class="p-2 text-light" href="getBeep.html" >Get Beep</a>
+         <a class="p-2 text-light" href="#" style="margin-right:140px">Contact Us</a>
+      </nav>
+      <a class="btn btn-outline-primary" href="login.html">Logout</a>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 getbeep">
+        <div class="card mt-40">
+          <div class="card-body">
+            <form class="form" method="post" action="/predict">
+              <p class="mb-2" style="text-align:center; font-weight:bold;">GET BEEP</p> <br>
+                <label>Your Name</label> <br>
+              <input type="text" class="form-control" name="uname"  required><br>
+
+                <label>Company Name</label> <br>
+              <input type="text" class="form-control" name="cname"  required><br>
+                <label>Organization Sector</label> <br>
+              <input type="text" class="form-control" name="sector" required><br>
+              <label>Country Name</label><br>
+              <input type="text" class="form-control" name="countryName" required>
+                <br><br>
+                <label>Location</label><br>
+              <input type="text" class="form-control" name="location" required>
+                <br><br>
+                  <label>Public or Private</label><br>
+              <input type="text" class="form-control" name="PP" required>
+                <br><br>
+              <input type="submit" class="btn btn-block btn-lg submit-btn" value="GET SIGNAL" style="width :100%">
+<!--              <p class="mt-2">Already a member? <a href="/">Login</a></p>-->
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
